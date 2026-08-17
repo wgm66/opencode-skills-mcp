@@ -1,0 +1,15 @@
+[Unit]
+Description=WeChat->OpenCode HTTP Gateway
+After=network.target wechat-mcp-daemon.service
+BindsTo=wechat-mcp-daemon.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/wechat-opencode-bridge/wechat-mcp-server.py --gateway-only
+Restart=always
+RestartSec=5
+WorkingDirectory=/opt/wechat-opencode-bridge
+Environment=HOME=/home/YOUR_USER
+
+[Install]
+WantedBy=default.target

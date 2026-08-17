@@ -1,0 +1,29 @@
+{
+  "_comment": "将此配置合并到 OpenCode 的 opencode.json 中（或直接作为项目配置）",
+  
+  "mcp": {
+    "wechat": {
+      "type": "local",
+      "command": [
+        "D:\\python\\python.exe",
+        "E:/opencode_mcp/wechat-opencode-bridge-main/wechat-mcp-server.py"
+      ],
+      "enabled": true,
+      "timeout": 300000,
+
+      "environment": {
+        "_comment_gateway": "HTTP 网关端口（默认 4100）",
+        "GATEWAY_PORT": "4100",
+
+        "_comment_model": "AI 模型配置：修改此处切换模型",
+        "WECHAT_MODEL_ID": "DeepSeek-V4-Pro",
+        "WECHAT_PROVIDER_ID": "aedfewfwegfergertge",
+
+        "_comment_advanced": "以下参数通常无需设置，网关会自动发现",
+        "_OPENCODE_URL": "留空=自动发现 OpenCode REST API 端口",
+        "_OPENCODE_SERVER_USERNAME": "留空=自动获取 API 用户名",
+        "_OPENCODE_SERVER_PASSWORD": "留空=自动获取 API 密码"
+      }
+    }
+  }
+}

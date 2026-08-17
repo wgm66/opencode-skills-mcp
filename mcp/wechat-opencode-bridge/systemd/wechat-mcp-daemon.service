@@ -1,0 +1,13 @@
+[Unit]
+Description=WeChat MCP Daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /home/YOUR_USER/.npm-global/bin/wechat-mcp daemon
+Restart=always
+RestartSec=3
+Environment=HOME=/home/YOUR_USER
+
+[Install]
+WantedBy=default.target

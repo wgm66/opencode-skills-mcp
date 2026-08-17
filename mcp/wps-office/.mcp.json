@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "chroma": {
+      "command": "uvx",
+      "args": [
+        "chroma-mcp"
+      ],
+      "env": {
+        "CHROMA_CLIENT_TYPE": "persistent",
+        "CHROMA_DATA_DIR": "G:\\opencode_mcp\\opencode-wps\\chroma_db",
+        "LOG_LEVEL": "INFO"
+      }
+    }
+  }
+}

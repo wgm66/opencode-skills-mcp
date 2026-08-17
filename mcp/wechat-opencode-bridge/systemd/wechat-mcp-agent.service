@@ -1,0 +1,14 @@
+[Unit]
+Description=WeChat MCP Agent Registration (opencode gateway)
+After=network.target wechat-mcp-daemon.service
+BindsTo=wechat-mcp-daemon.service
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c 'tail -f /dev/null | /home/YOUR_USER/.npm-global/bin/wechat-mcp serve --agent opencode --mode gateway --gateway-url http://localhost:4100 --gateway-type claw'
+Restart=always
+RestartSec=5
+Environment=HOME=/home/YOUR_USER
+
+[Install]
+WantedBy=default.target
